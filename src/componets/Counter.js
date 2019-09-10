@@ -1,43 +1,40 @@
-import React from 'react';
+import React from "react";
 
-
-class CounterApp extends React.Component{
+class CounterApp extends React.Component {
   constructor(props) {
-      super(props);
-      this.state = {
-          count: 0
-        };
+    super(props);
+    this.state = {
+      count: 0
+    };
   }
 
-  handeleIrement() {
-      this.setState({
-        count: this.state.count + 1 
-      });
+  Increment() {
+    this.setState({
+      count: this.state.count + 1
+    });
   }
 
-  handeleDecrement() {
-    if(this.state.count === 0){
-      alert("ups, not minus llowed")
-      
+  Decrement() {
+    if (this.state.count === 0) {
+      alert("ups, not minus llowed");
     } else {
-    
       this.setState({
         count: this.state.count - 1
       });
     }
-    }
+  }
 
   render() {
-    return(
+    return (
       <div>
         <div>{this.state.count}</div>
         <div>
-          <button onClick={() => this.handeleIrement()}>+</button>
-          <button onClick={() => this.handeleDecrement()}>-</button>
-      </div>
+          <button onClick={() => this.Increment()}>+</button>
+          <button onClick={() => this.Decrement()}>-</button>
+        </div>
       </div>
     );
-  } 
+  }
 }
 
-export default CounterApp
+export default CounterApp;
