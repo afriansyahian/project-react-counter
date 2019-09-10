@@ -16,9 +16,15 @@ class CounterApp extends React.Component{
   }
 
   handeleDecrement() {
+    if(this.state.count === 0){
+      alert("ups, not minus llowed")
+      
+    } else {
+    
       this.setState({
-        count: this.state.count -1
+        count: this.state.count - 1
       });
+    }
     }
 
   render() {
